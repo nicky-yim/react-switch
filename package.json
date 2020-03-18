@@ -1,5 +1,5 @@
 {
-  "name": "react-switch",
+  "name": "@nicky-yim/react-switch",
   "version": "5.0.1",
   "description": "Draggable toggle-switch component for react",
   "main": "index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/markusenglund/react-switch.git"
+    "url": "git+https://github.com/nicky-yim/react-switch.git"
   },
   "author": "Markus Englund <markus.s.englund@gmail.com>",
   "license": "MIT",
