@@ -1,6 +1,6 @@
 {
   "name": "@nicky-yim/react-switch",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Draggable toggle-switch component for react",
   "main": "index.js",
   "scripts": {
