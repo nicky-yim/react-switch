@@ -197,7 +197,6 @@ class ReactSwitch extends Component {
       height,
       width,
       handleDiameter, // just to filter this prop out
-      name,
       ...rest
     } = this.props;
 
@@ -337,23 +336,20 @@ class ReactSwitch extends Component {
           onTouchEnd={disabled ? null : this.$onTouchEnd}
           onTouchCancel={disabled ? null : this.$unsetHasOutline}
         />
-        <label name={name} htmlFor={name}>
-          <input
-            name={name}
-            type="checkbox"
-            role="switch"
-            aria-checked={checked}
-            disabled={disabled}
-            style={inputStyle}
-            {...rest}
-            /* anything below should NOT get overriden by ...rest */
-            ref={this.$getInputRef}
-            onFocus={this.$setHasOutline}
-            onBlur={this.$unsetHasOutline}
-            onKeyUp={this.$onKeyUp}
-            onChange={this.$onInputChange}
-          />
-        </label>
+        <input
+          type="checkbox"
+          role="switch"
+          aria-checked={checked}
+          disabled={disabled}
+          style={inputStyle}
+          {...rest}
+          /* anything below should NOT get overriden by ...rest */
+          ref={this.$getInputRef}
+          onFocus={this.$setHasOutline}
+          onBlur={this.$unsetHasOutline}
+          onKeyUp={this.$onKeyUp}
+          onChange={this.$onInputChange}
+        />
       </div>
     );
   }
@@ -374,8 +370,7 @@ ReactSwitch.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
   id: PropTypes.string,
-  className: PropTypes.string,
-  name: PropTypes.string
+  className: PropTypes.string
 };
 
 ReactSwitch.defaultProps = {
@@ -389,8 +384,7 @@ ReactSwitch.defaultProps = {
   boxShadow: null,
   activeBoxShadow: "0 0 2px 3px #3bf",
   height: 28,
-  width: 56,
-  name: "switch"
+  width: 56
 };
 
 export default ReactSwitch;
